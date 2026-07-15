@@ -1,17 +1,23 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import Button from './components/button.jsx'
+import card from './components/card.jsx'
+import languages from './data/languages.js'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [active, setactive] = useState(null)
 
   return (
     <>
-      
+      {languages.map((lang)=>
+      <Button 
+      key={lang.id} 
+      title={lang.title} 
+      active={active===lang.id}
+      onClick={()=>setactive(lang.id)}/>
+      )}
     </>
   )
 }
 
-export default App
+export default App;

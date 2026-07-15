@@ -1,0 +1,9 @@
+.formbutton{
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: red;
+    border-radius: 10px;
+}
+.formbutton.active{
+    background-color: green;
+}
